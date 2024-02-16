@@ -7,11 +7,11 @@
 |              |                                                      |
 | :----------- | ---------------------------------------------------- |
 | Project Name | Opus                                                 |
-| Repository   | [Github](https://github.com/code-423n4/2024-01-opus) |
-| Website      | [Opus](https://www.opus.money)                       |
-| X(Twitter)   | [Twitter](https://twitter.com/OpusMoney)             |
-| Methods      | Manual Review                                        |
-| Total SLOC   | 4100 over 13 contracts                               |
+| Repository   | :heart_eyes: [:octocat:](https://github.com/code-423n4/2024-01-opus) |
+| Website      | **[Opus]**(https://www.opus.money)                       |
+| X(Twitter)   | **[Twitter]**(https://twitter.com/OpusMoney)             |
+| Methods      | **Manual Review**                                        |
+| Total SLOC   | **4100** over **13** contracts                               |
 
 ---
 
@@ -19,12 +19,12 @@
 
 | ID              | Title                                                                                                | Severity       |
 | --------------- | ---------------------------------------------------------------------------------------------------- | -------------- |
-| [L - 01](#L-01) | Reentrancy Guard missing for `allocate()` - yin transfer to recipients.                              | _Low_          |
-| [L - 02](#L-02) | Console Account Creation Without Policies Leads to Enforcement Challenges                            | _Low_          |
-| [L - 03](#L-03) | transmuter.cairo :: `settle()` function misses reentrancy guards on the calls made                   | _Low_          |
-| [NC-01](#NC-01) | Refactor `get_trove_asset_balance` for Improved Code Readability and Functionality                   | _Non Critical_ |
-| [NC-02](#NC-02) | Important operations are missing event emission.                                                     | _Non Critical_ |
-| [NC-03](#NC-03) | `Transfer_asstets()` performs important operation, better to have Event Emission.                    | _Non Critical_ |
+| [L - 01](#l-01-reentrancy-guard-missing-for-equalizercairo-allocate---yin-transfer-to-recipients) | Reentrancy Guard missing for `allocate()` - yin transfer to recipients.                              | _Low_          |
+| [L - 02](#l-02-flash_mintcairo--flash_loan-doesnt-perform-any-access-control-checks) | Console Account Creation Without Policies Leads to Enforcement Challenges                            | _Low_          |
+| [L - 03](#l-03-transmutercairo--settle-function-misses-reentrancy-guards-on-the-calls-made) | transmuter.cairo :: `settle()` function misses reentrancy guards on the calls made                   | _Low_          |
+| [NC-01](#nc-01-refactor-get_trove_asset_balance-for-improved-code-readability-and-functionality) | Refactor `get_trove_asset_balance` for Improved Code Readability and Functionality                   | _Non Critical_ |
+| [NC-02](#nc-02-important-operations-are-missing-event-emission) | Important operations are missing event emission.                                                     | _Non Critical_ |
+| [NC-03](#nc-03-absorbercairo-transfer_asstets-performs-important-operation-better-to-have-an-event-emission) | `Transfer_asstets()` performs important operation, better to have Event Emission.                    | _Non Critical_ |
 | [NC-04](#NC-04) | abbot.cairo :: event Please define the `struct` before defining the `event` for enhanced readability | _Non Critical_ |
 
 ---
