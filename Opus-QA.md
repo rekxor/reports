@@ -33,7 +33,7 @@
 
 ## [L-01] Reentrancy Guard missing for equalizer.cairo:: `allocate()` - yin transfer to recipients
 
-#### [Code Snippet](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/equalizer.cairo#L170-#L200)
+#### [Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/equalizer.cairo#L170-#L200)
 
 ```rust
 loop {
@@ -57,7 +57,7 @@ Add the `self.reentrancy_guard.start();` before the logic code and end the funct
 
 ## [L-02] flash_mint.cairo :: `flash_loan()` doesn't perform any access control checks
 
-[Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/flash_mint.cairo#L100C9-L152C10):
+#### [Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/flash_mint.cairo#L100C9-L152C10):
 
 ```rust
 fn flash_loan(
@@ -114,7 +114,7 @@ Since anyone can call flashloan() with any random borrower as target with random
 
 ## [L-03] transmuter.cairo :: `settle()` function misses reentrancy guards on the calls made
 
-[Code Location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/transmuter.cairo#L417C9-L453C1):
+#### [Code Location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/transmuter.cairo#L417C9-L453C1):
 
 ```rust
 // code
@@ -134,7 +134,7 @@ Ensure `Check Effects Interaction(CEI)` pattern is followed and add reentrancy g
 
 ## [NC-01] Refactor `get_trove_asset_balance` for Improved Code Readability and Functionality
 
-#### [Code Snippet](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/abbot.cairo#L121-#L122):
+#### [Code location](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/abbot.cairo#L121-#L122):
 
 ```rust
 fn get_trove_asset_balance(self: @ContractState, trove_id: u64, yang: ContractAddress) -> u128 {
@@ -159,7 +159,7 @@ fn get_trove_asset_balance(
 ##
 ## [NC-02] Important operations are missing event emission.
 
-[Code Location](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/abbot.cairo#L215-#L225):
+#### [Code Location](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/abbot.cairo#L215-#L225):
 
 The above linked code defines `forge()` and `melt()` that **creates** and **destroy** Yin.
 
@@ -206,7 +206,7 @@ fn melt(ref self: ContractState, trove_id: u64, amount: Wad) {
 ##
 ## [NC-03] absorber.cairo:: `Transfer_asstets()` performs important operation, better to have an Event Emission.
 
-[Code location](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/absorber.cairo#L876):
+#### [Code location](https://github.com/code-423n4/2024-01-opus/blob/4720e9481a4fb20f4ab4140f9cc391a23ede3817/src/core/absorber.cairo#L876):
 
 ```rust
 fn transfer_assets(ref self: ContractState, to: ContractAddress, mut asset_balances: Span<AssetBalance>) {
@@ -236,9 +236,9 @@ Adding events in the `enum` and emitting them in our respective function.
 
 #### _Issue:_
 
-The code snippet defines the Event well before then defining the structs used in the events. Though `cairo` programming language won't raise any alert/warning but for understanding the codebase it will be helpful for fellow researchers.
+The Code location defines the Event well before then defining the structs used in the events. Though `cairo` programming language won't raise any alert/warning but for understanding the codebase it will be helpful for fellow researchers.
 
-[Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/abbot.cairo#L53-#L72):
+#### [Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/abbot.cairo#L53-#L72):
 
 ```rust
     #[event]
