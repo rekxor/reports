@@ -1,6 +1,7 @@
 # QA Report : Opus Audit Contest | 9<sup>th</sup> Jan 2024 - 6<sup>th</sup> Feb 2024
-  ==================================================================================
+
 ## Executive summary
+
 
 ## Overview
 
@@ -9,7 +10,7 @@
 | Project Name | **Opus**                                                 |
 | Github Repository   | [:octocat:](https://github.com/code-423n4/2024-01-opus) |
 | Website      | **[Opus](https://www.opus.money)**                       |
-| X(Twitter)   | **[X](https://twitter.com/OpusMoney)**             |
+| X(Twitter)   | **[𝕏](https://twitter.com/OpusMoney)**            |
 | Method(s) used      | **Manual Review**                                        |
 | Total SLoC   | **4100** over **13** contracts                               |
 
