@@ -6,12 +6,12 @@
 
 |              |                                                      |
 | :----------- | ---------------------------------------------------- |
-| Project Name | Opus                                                 |
-| Repository   | :heart_eyes: [:octocat:](https://github.com/code-423n4/2024-01-opus) |
-| Website      | **[Opus]**(https://www.opus.money)                       |
-| X(Twitter)   | **[Twitter]**(https://twitter.com/OpusMoney)             |
-| Methods      | **Manual Review**                                        |
-| Total SLOC   | **4100** over **13** contracts                               |
+| Project Name | **Opus**                                                 |
+| Github Repository   | [:octocat:](https://github.com/code-423n4/2024-01-opus) |
+| Website      | **[Opus](https://www.opus.money)**                       |
+| X(Twitter)   | **[X](https://twitter.com/OpusMoney)**             |
+| Method(s) used      | **Manual Review**                                        |
+| Total SLoC   | **4100** over **13** contracts                               |
 
 ---
 
