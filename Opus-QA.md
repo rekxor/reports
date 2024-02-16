@@ -234,10 +234,14 @@ Adding events in the `enum` and emitting them in our respective function.
 
 ## [NC-04] abbot.cairo:: `event` Please define the struct before defining the event for enhanced readability
 
+#### _Issue:_
+
+The code snippet defines the Event well before then defining the structs used in the events. Though `cairo` programming language won't raise any alert/warning but for understanding the codebase it will be helpful for fellow researchers.
+
 [Code location](https://github.com/code-423n4/2024-01-opus/blob/main/src/core/abbot.cairo#L53-#L72):
 
 ```rust
-	#[event]
+    #[event]
     #[derive(Copy, Drop, starknet::Event, PartialEq)]
     enum Event {
         TroveOpened: TroveOpened,
@@ -261,9 +265,6 @@ Adding events in the `enum` and emitting them in our respective function.
     }
 ```
 
-#### _Issue:_
-
-The code snippet defines the Event well before then defining the structs used in the events. Though `cairo` programming language won't raise any alert/warning but for understanding the codebase it will be helpful for fellow researchers.
 
 #### Recommendation:
 
